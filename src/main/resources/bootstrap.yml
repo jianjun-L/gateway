@@ -1,0 +1,21 @@
+server:
+  port: 8807
+spring:
+  application:
+    name: gateway
+  cloud:
+    config:
+      uri: http://127.0.0.1:8804
+      discovery:
+        service-id: EUREKA-CONFIG
+        enabled: true
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+eureka:
+  client:
+    service-url:
+      defaultZone: http://172.16.207.252:8801/eureka/
